@@ -1,0 +1,7 @@
+#!/bin/sh
+# Pre-commit hook: ensure code builds and formatting is correct
+dotnet build --no-restore -c Release -v q
+if [ $? -ne 0 ]; then
+    echo "Build failed. Fix errors before committing."
+    exit 1
+fi
