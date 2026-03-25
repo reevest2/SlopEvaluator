@@ -23,6 +23,7 @@ class Program
             "history" => await Commands.HistoryCommand.RunAsync(args, loggerFactory),
             "compare" => await Commands.CompareCommand.RunAsync(args, loggerFactory),
             "gate" => await Commands.GateCommand.RunAsync(args, loggerFactory),
+            "report" => await Commands.ReportCommand.RunAsync(args, loggerFactory),
             _ => PrintUsage()
         };
     }
@@ -43,6 +44,7 @@ class Program
               history <name>           Show health score trend
               compare <path1> <path2>  Compare two codebases
               gate <path> --threshold  CI quality gate
+              report <path>            Diagnostic report with recommendations
             """);
         return 0;
     }
