@@ -7,7 +7,7 @@ public static class CompareCommand
 {
     public static Task<int> RunAsync(string[] args, ILoggerFactory loggerFactory)
     {
-        Console.WriteLine("compare: Not yet implemented");
+        Console.WriteLine("  compare: Coming soon — compare two codebases side by side.");
         return Task.FromResult(0);
     }
 }

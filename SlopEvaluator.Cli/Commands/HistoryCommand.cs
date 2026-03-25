@@ -7,7 +7,7 @@ public static class HistoryCommand
 {
     public static Task<int> RunAsync(string[] args, ILoggerFactory loggerFactory)
     {
-        Console.WriteLine("history: Not yet implemented");
+        Console.WriteLine("  history: Coming soon — show health score trend over time.");
         return Task.FromResult(0);
     }
 }
