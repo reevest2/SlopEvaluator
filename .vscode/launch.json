@@ -1,0 +1,23 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug SlopEvaluator CLI",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/SlopEvaluator.Cli/bin/Debug/net10.0/SlopEvaluator.Cli.dll",
+      "args": ["scan", "."],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Debug Tests",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "dotnet",
+      "args": ["test", "--no-build", "--filter", "FullyQualifiedName~SlopEvaluator.Tests"],
+      "cwd": "${workspaceFolder}",
+      "console": "integratedTerminal"
+    }
+  ]
+}

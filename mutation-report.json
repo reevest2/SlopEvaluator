@@ -1,0 +1,25 @@
+{
+  "sourceFile": "SlopEvaluator.Shared/Scoring/ScoreAggregator.cs",
+  "target": "SlopEvaluator.Tests",
+  "runDate": "2026-03-25T09:00:00Z",
+  "totalDuration": "00:05:30",
+  "baselineDuration": "00:00:12",
+  "baselineTestCount": 45,
+  "results": [
+    { "id": "mut-001", "strategy": "EmptyMethodBody", "description": "Empty WeightedAverage body", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:15", "testsRun": 8, "testsFailed": 6 },
+    { "id": "mut-002", "strategy": "RemoveGuardClause", "description": "Remove totalWeight > 0 guard", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:12", "testsRun": 8, "testsFailed": 3 },
+    { "id": "mut-003", "strategy": "SwapStatements", "description": "Swap score and weight accumulation", "riskLevel": "Medium", "outcome": "Killed", "duration": "00:00:14", "testsRun": 8, "testsFailed": 7 },
+    { "id": "mut-004", "strategy": "RemoveStatement", "description": "Remove totalScore += score * weight", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:11", "testsRun": 8, "testsFailed": 8 },
+    { "id": "mut-005", "strategy": "EmptyMethodBody", "description": "Empty ComputeWeightedScore body", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:13", "testsRun": 12, "testsFailed": 10 },
+    { "id": "mut-006", "strategy": "RemoveStatement", "description": "Remove totalWeight accumulation", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:12", "testsRun": 8, "testsFailed": 5 },
+    { "id": "mut-007", "strategy": "SwapStatements", "description": "Swap return with early return", "riskLevel": "Medium", "outcome": "Killed", "duration": "00:00:10", "testsRun": 8, "testsFailed": 4 },
+    { "id": "mut-008", "strategy": "RemoveGuardClause", "description": "Remove null check in CompositeSignal", "riskLevel": "Medium", "outcome": "Killed", "duration": "00:00:14", "testsRun": 5, "testsFailed": 2 },
+    { "id": "mut-009", "strategy": "EmptyMethodBody", "description": "Empty AggregateMutationReports body", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:16", "testsRun": 6, "testsFailed": 6 },
+    { "id": "mut-010", "strategy": "RemoveStatement", "description": "Remove killed counter increment", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:13", "testsRun": 6, "testsFailed": 4 },
+    { "id": "mut-011", "strategy": "SwapStatements", "description": "Swap killed/survived counters", "riskLevel": "High", "outcome": "Killed", "duration": "00:00:12", "testsRun": 6, "testsFailed": 5 },
+    { "id": "mut-012", "strategy": "RemoveGuardClause", "description": "Remove empty reports check", "riskLevel": "Low", "outcome": "Survived", "duration": "00:00:11", "testsRun": 6, "testsFailed": 0 },
+    { "id": "mut-013", "strategy": "RemoveStatement", "description": "Remove survivorDescriptions.Add", "riskLevel": "Low", "outcome": "Survived", "duration": "00:00:10", "testsRun": 6, "testsFailed": 0 },
+    { "id": "mut-014", "strategy": "EmptyMethodBody", "description": "Empty NormalizeCorrelation body", "riskLevel": "Medium", "outcome": "Killed", "duration": "00:00:09", "testsRun": 4, "testsFailed": 3 },
+    { "id": "mut-015", "strategy": "RemoveStatement", "description": "Remove ComputeImprovementTrend logic", "riskLevel": "Medium", "outcome": "Killed", "duration": "00:00:11", "testsRun": 4, "testsFailed": 2 }
+  ]
+}

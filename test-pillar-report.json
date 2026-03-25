@@ -1,0 +1,56 @@
+{
+  "testFile": "SlopEvaluator.Tests",
+  "testsAnalyzed": 45,
+  "totalScore": 40,
+  "maxScore": 48,
+  "grade": "B+",
+  "pillars": {
+    "Trustworthiness": {
+      "name": "Trustworthiness",
+      "score": 10,
+      "maxScore": 12,
+      "attributes": {
+        "Deterministic": 3,
+        "Isolated": 2.5,
+        "Repeatable": 3,
+        "Independent": 2.5
+      }
+    },
+    "Precision": {
+      "name": "Precision",
+      "score": 9.5,
+      "maxScore": 12,
+      "attributes": {
+        "SingleConcern": 2.5,
+        "ClearAssertions": 3,
+        "MinimalSetup": 2,
+        "BoundaryTesting": 2
+      }
+    },
+    "Maintainability": {
+      "name": "Maintainability",
+      "score": 9,
+      "maxScore": 12,
+      "attributes": {
+        "Readability": 2.5,
+        "Naming": 3,
+        "DRY": 2,
+        "Organization": 1.5
+      }
+    },
+    "Diagnostic Value": {
+      "name": "Diagnostic Value",
+      "score": 9.5,
+      "maxScore": 12,
+      "attributes": {
+        "FailureMessages": 2.5,
+        "ErrorLocalization": 2.5,
+        "Traceability": 2,
+        "ContextCapture": 2.5
+      }
+    }
+  },
+  "issues": [
+    { "testName": "UnitTest1.Test1", "attribute": "Precision", "description": "Empty test with no assertions", "score": 0 }
+  ]
+}

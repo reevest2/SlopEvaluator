@@ -1,0 +1,8 @@
+{
+  "scores": {
+    "lineCoverage": 87.2,
+    "branchCoverage": 82.5,
+    "mutationScore": 0.867,
+    "edgeCaseCoverage": 78.4
+  }
+}

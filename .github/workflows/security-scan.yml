@@ -1,0 +1,16 @@
+name: Security Scan
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: '0 6 * * 1'
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run security analysis with gitleaks
+        uses: gitleaks/gitleaks-action@v2

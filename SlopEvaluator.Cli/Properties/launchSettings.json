@@ -1,0 +1,25 @@
+{
+  "profiles": {
+    "SlopEvaluator.Cli": {
+      "commandName": "Project",
+      "commandLineArgs": "scan .",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    "scan-self": {
+      "commandName": "Project",
+      "commandLineArgs": "scan . --format json",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    },
+    "gate-check": {
+      "commandName": "Project",
+      "commandLineArgs": "gate . --threshold 0.60",
+      "environmentVariables": {
+        "DOTNET_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}

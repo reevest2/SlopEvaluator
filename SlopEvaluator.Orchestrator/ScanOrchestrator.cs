@@ -38,8 +38,16 @@ public sealed class ScanOrchestrator
         name ??= Path.GetFileName(path);
 
         var logger = _loggerFactory.CreateLogger<CodebaseCollector>();
-        var collector = new CodebaseCollector(logger: logger);
-        var codebase = await collector.CollectAsync(path, name);
+
+        // Wire up InteractionStore for AI quality metrics
+        var dataDir = Environment.GetEnvironmentVariable("SLOP_EVAL_DATA")
+            ?? Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile), ".slopeval");
+        var interactionsDir = Path.Combine(dataDir, "interactions");
+        var interactionStore = new InteractionStore(interactionsDir,
+            _loggerFactory.CreateLogger<InteractionStore>());
+
+        var collector = new CodebaseCollector(interactionStore, logger);
+        var codebase = await collector.CollectAsync(path, name, domain: name);
 
         // Save snapshot and compute delta
         var snapshot = await _snapshotStore.SaveSnapshotAsync(codebase, path);
