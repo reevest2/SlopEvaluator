@@ -1,0 +1,8 @@
+<Solution>
+  <Project Path="SlopEvaluator.Cli/SlopEvaluator.Cli.csproj" />
+  <Project Path="SlopEvaluator.Health/SlopEvaluator.Health.csproj" />
+  <Project Path="SlopEvaluator.Mutations/SlopEvaluator.Mutations.csproj" />
+  <Project Path="SlopEvaluator.Orchestrator/SlopEvaluator.Orchestrator.csproj" />
+  <Project Path="SlopEvaluator.Shared/SlopEvaluator.Shared.csproj" />
+  <Project Path="SlopEvaluator.Tests/SlopEvaluator.Tests.csproj" />
+</Solution>
