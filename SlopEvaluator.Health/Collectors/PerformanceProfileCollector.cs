@@ -91,6 +91,8 @@ public class PerformanceProfileCollector
                     && !rel.Contains("/bin/") && !rel.StartsWith("bin/")
                     && !rel.Contains("benchmarks/")
                     && !rel.Contains(".claude/worktrees/")
+                    && !rel.Contains("SlopEvaluator/")
+                    && !rel.Contains("SlopEvaluator\\")
                     && !rel.Contains("Test");
             })
             .ToList();
@@ -153,7 +155,12 @@ public class PerformanceProfileCollector
     {
         // Count DLLs in the first bin/Debug output folder
         var binDirs = Directory.GetDirectories(projectPath, "net*",  SearchOption.AllDirectories)
-            .Where(d => d.Replace('\\', '/').Contains("/bin/Debug/"))
+            .Where(d => {
+                var normalized = d.Replace('\\', '/');
+                return normalized.Contains("/bin/Debug/")
+                    && !normalized.Contains("SlopEvaluator/")
+                    && !normalized.Contains(".claude/worktrees/");
+            })
             .Take(1);
 
         foreach (var dir in binDirs)
